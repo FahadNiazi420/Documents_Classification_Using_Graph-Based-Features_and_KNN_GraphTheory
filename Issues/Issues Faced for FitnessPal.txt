@@ -1,0 +1,9 @@
+=>Some websites may block requests that don't include a User-Agent header or have a suspicious User-Agent. You can try adding a User-Agent header to your request to mimic a browser.so Add:
+"# Define a User-Agent header
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
+}
+
+=>Pagination issues: No proper paging system, so had to get div that held <a href="link"> for next page
+=>Limits to 5 numbers of pages scraped at once(myfitnesspal)
+=>ConnectionError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
