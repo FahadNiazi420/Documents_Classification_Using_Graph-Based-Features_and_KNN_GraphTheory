@@ -34,7 +34,7 @@ def get_links(url, links_to_visit):
 
 def extract_text(links_to_visit):
     # Create a folder if it doesn't exist
-    folder_name = "Unprocessed Data"
+    folder_name = "../Unprocessed Data"
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
 
