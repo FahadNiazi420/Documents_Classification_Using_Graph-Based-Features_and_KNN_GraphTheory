@@ -18,7 +18,7 @@ from nltk.stem import WordNetLemmatizer
 
 # Function to create the Processed Data folder if it doesn't exist
 def create_processed_folder():
-    folder_name = "Processed Data"
+    folder_name = "../Processed Data"
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
 
@@ -61,11 +61,11 @@ def clean_and_preprocess_datasets():
     create_processed_folder()
 
     # Read each dataset from Unprocessed Data folder
-    unprocessed_folder = "Unprocessed Data"
+    unprocessed_folder = "../Unprocessed Data"
     for filename in os.listdir(unprocessed_folder):
         if filename.endswith(".csv"):
             unprocessed_filepath = os.path.join(unprocessed_folder, filename)
-            processed_filepath = os.path.join("Processed Data", f"cleaned_{filename}")
+            processed_filepath = os.path.join("../Processed Data", f"cleaned_{filename}")
 
             # Read dataset
             df = pd.read_csv(unprocessed_filepath)
